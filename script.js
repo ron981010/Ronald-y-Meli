@@ -27,3 +27,60 @@ const countdown = setInterval(function() {
         document.getElementById('countdown').innerHTML = "The wedding has already happened!";
     }
 }, 1000);
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Check if user has made a choice before
+    if (!localStorage.getItem('musicPreference')) {
+        // Display popup asking user's preference
+        let musicPreference = confirm("Do you want music on the website?");
+    
+        // Save user's preference in localStorage
+        localStorage.setItem('musicPreference', musicPreference);
+    }
+
+    // Always play music when the page loads
+    playMusic();
+
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("slide");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+});
+
+function playMusic() {
+    let musicElement = document.getElementById('music');
+    if (musicElement) {
+        musicElement.play().then(function() {
+            // Music started playing successfully
+            console.log("Music started playing");
+        }).catch(function(error) {
+            // Music playback failed, handle the error
+            console.error("Error playing music:", error);
+        });
+    }
+}
+function stopMusic() {
+    let musicElement = document.getElementById('music');
+    if (musicElement) {
+        musicElement.pause();
+    }
+    // Save user's preference as false when stopping music
+    localStorage.setItem('musicPreference', false);
+}
+
+// Add event listener to play button
+document.getElementById('play-btn').addEventListener('click', playMusic);
+
+// Add event listener to stop button
+document.getElementById('stop-btn').addEventListener('click', stopMusic);

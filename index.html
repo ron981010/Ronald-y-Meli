@@ -7,11 +7,26 @@
     <title>Nuestra Boda Ronald y Melissa</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <meta property="og:image" content="rings.jpg">
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="music-controls">
+        <div class="frame">
+            <a id="play-btn" class="btn">
+                <i class="fas fa-play"></i>
+            </a>
+            <a id="stop-btn" class="btn">
+                <i class="fas fa-stop"></i>
+            </a>
+
+        </div>
+
+        <audio id="music" loop>
+            <source src="music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
         <div class="names">
             <h1 class="name-1">Ronald</h1>
             <div class="lineY">
@@ -26,7 +41,7 @@
         </div></span>
         <div class="heart"></div>
     </div>
-    <div class="countdown" >
+    <div class="countdown">
         <h1>Estamos a</h1>
         <div id="timer">
             <div class="time-unit" id="days">00</div>
@@ -87,13 +102,17 @@
         <div class="lineBlock"></div>
         <h2 class="tittle">DIA</h2>
         <p>Sabado 13 de abril - 15hs</p>
-        <a target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=NmQwNDR0cGV0dG9pbWZocWJoMzhmZDg5ZjggcmNhY2FyYXBpLjk4QG0&amp;tmsrc=rcacarapi.98%40gmail.com">Agendar</a>
+        <a target="_blank"
+            href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=NmQwNDR0cGV0dG9pbWZocWJoMzhmZDg5ZjggcmNhY2FyYXBpLjk4QG0&amp;tmsrc=rcacarapi.98%40gmail.com">Agendar</a>
         <h2 class="tittle">LUGAR</h2>
         <p>Casa Jardin Eventos - Tiquipaya</p>
-        <a target="_blank" href="https://api.whatsapp.com/send?phone=+59179720134&text=Si%20podr%C3%A9%20asistir%20a%20la%20boda%20el%2013%20de%20abril,%20soy...%20e%20ire%20con..">Confirmar Asistencia</a>
+        <a target="_blank"
+            href="https://api.whatsapp.com/send?phone=+59179720134&text=Si%20podr%C3%A9%20asistir%20a%20la%20boda%20el%2013%20de%20abril,%20soy...%20e%20ire%20con..">Confirmar
+            Asistencia</a>
         <h2 class="tittle">DIRECCION</h2>
         <p>Av. Chillimarca 92, frente del condominio Madragoras, Tiquipaya.</p>
-        <a href="https://www.google.com/maps/place/Casa+Jard%C3%ADn+Eventos/@-17.341009,-66.203045,15z/data=!4m6!3m5!1s0x93e3751076d96967:0x389306317f531901!8m2!3d-17.341009!4d-66.203045!16s%2Fg%2F11b6_gpk4c?entry=ttu" target="_blank">Como llegar</a>
+        <a href="https://www.google.com/maps/place/Casa+Jard%C3%ADn+Eventos/@-17.341009,-66.203045,15z/data=!4m6!3m5!1s0x93e3751076d96967:0x389306317f531901!8m2!3d-17.341009!4d-66.203045!16s%2Fg%2F11b6_gpk4c?entry=ttu"
+            target="_blank">Como llegar</a>
     </div>
     <div class="anim-fiesta">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130" width="130" height="130"
@@ -239,18 +258,76 @@
         <div class="lineBlock"></div>
         <h2 class="tittle">DIA</h2>
         <p>Sabado 13 de abril - 17hs</p>
-        <a target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=MnNudjZicWFxcmxwazJpM2wxbzUyNHB1b24gcmNhY2FyYXBpLjk4QG0&amp;tmsrc=rcacarapi.98%40gmail.com">Agendar</a>
+        <a target="_blank"
+            href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=MnNudjZicWFxcmxwazJpM2wxbzUyNHB1b24gcmNhY2FyYXBpLjk4QG0&amp;tmsrc=rcacarapi.98%40gmail.com">Agendar</a>
         <h2 class="tittle">LUGAR</h2>
         <p>Casa Jardin Eventos - Tiquipaya</p>
-        <a target="_blank" href="https://api.whatsapp.com/send?phone=+59179720134&text=Si%20podr%C3%A9%20asistir%20a%20la%20boda%20el%2013%20de%20abril,%20soy...%20e%20ire%20con..">Confirmar Asistencia</a>
+        <a target="_blank"
+            href="https://api.whatsapp.com/send?phone=+59179720134&text=Si%20podr%C3%A9%20asistir%20a%20la%20boda%20el%2013%20de%20abril,%20soy...%20e%20ire%20con..">Confirmar
+            Asistencia</a>
         <h2 class="tittle">DIRECCION</h2>
         <p>Av. Chillimarca 92, frente del condominio Madragoras, Tiquipaya.</p>
-        <a href="https://www.google.com/maps/place/Casa+Jard%C3%ADn+Eventos/@-17.341009,-66.203045,15z/data=!4m6!3m5!1s0x93e3751076d96967:0x389306317f531901!8m2!3d-17.341009!4d-66.203045!16s%2Fg%2F11b6_gpk4c?entry=ttu" target="_blank">Como llegar</a>
+        <a href="https://www.google.com/maps/place/Casa+Jard%C3%ADn+Eventos/@-17.341009,-66.203045,15z/data=!4m6!3m5!1s0x93e3751076d96967:0x389306317f531901!8m2!3d-17.341009!4d-66.203045!16s%2Fg%2F11b6_gpk4c?entry=ttu"
+            target="_blank">Como llegar</a>
+    </div>
+    <div class="carousel">
+        <h1>Retratos de nuestra historia de amor</h1>
+        <P>Hemos camino juntos y por eso decidimos seguir haciendolo hasta la eternidad.
+        <P>
+        <div class="slide">
+            <div class="polaroid">
+                <img src="photo1.jpg" alt="Image 1">
+            </div>
+            <div class="polaroid1">
+                <img src="photo3.jpg" alt="Image 2">
+            </div>
+        </div>
+        <div class="slide">
+            <div class="polaroid">
+                <img src="photo4.jpg" alt="Image 3">
+            </div>
+            <div class="polaroid1">
+                <img src="photo2.jpg" alt="Image 4">
+            </div>
+        </div>
+        <div class="slide">
+            <div class="polaroid">
+                <img src="photo6.jpg" alt="Image 5">
+            </div>
+            <div class="polaroid1">
+                <img src="photo7.jpg" alt="Image 6">
+            </div>
+        </div>
+        <div class="slide">
+            <div class="polaroid">
+                <img src="photo8.jpg" alt="Image 7">
+            </div>
+            <div class="polaroid1">
+                <img src="photo9.jpg" alt="Image 8">
+            </div>
+        </div>
+        <div class="slide">
+            <div class="polaroid">
+                <img src="photo11.jpg" alt="Image 9">
+            </div>
+            <div class="polaroid1">
+                <img src="photo10.jpg" alt="Image 10">
+            </div>
+        </div>
+        <div class="slide">
+            <div class="polaroid">
+                <img src="photo12.jpg" alt="Image 11">
+            </div>
+            <div class="polaroid1">
+                <img src="photo14.jpg" alt="Image 12">
+            </div>
+        </div>
     </div>
     <div class="gifts"></div>
     <div class="eventDetails" id="ron1">
         <h1>Regalos</h1>
-        <p  class="eventDetailsText">Si deseas regalarnos algo mas que tu hermosa presencia, planeamos viajar al exterior muy pronto, y todo aporte es bienvenido.</p>
+        <p class="eventDetailsText">Si deseas regalarnos algo mas que tu hermosa presencia, planeamos mudarnos al exterior
+            muy pronto, y todo aporte es bienvenido.</p>
         <a>Escanea el codigo QR - Bolivia </a>
         <img src="QR.jpg" alt="qr gift">
     </div>

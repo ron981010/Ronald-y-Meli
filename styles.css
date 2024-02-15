@@ -430,3 +430,113 @@ a {
 .eventDetailsText {
   padding: 25px;
 }
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  padding-bottom: 75px;
+}
+
+.slide {
+  padding-top: 30px;
+  display: none;
+}
+
+.slide img {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.polaroid {
+  transform: rotate(5deg);
+}
+
+.polaroid1 {
+  transform: rotate(-10deg);
+}
+
+.polaroid,
+.polaroid1 {
+  background-color: #fff;
+  padding: 20px 20px 80px 20px;
+  margin: 10px;
+  display: inline-block;
+  -webkit-box-shadow: 10px 10px 45px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 45px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 45px -9px rgba(0, 0, 0, 0.75);
+}
+
+.polaroid img {
+  width: 350px;
+  height: auto;
+}
+
+.polaroid1 img {
+  width: 350px;
+  height: auto;
+}
+
+#music-controls button:hover {
+  background-color: #cf7411;
+}
+
+.frame{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    width: 200px;
+    position: relative;
+     box-shadow:
+     -7px -7px 20px 0px #fff9,
+     -4px -4px 5px 0px #fff9,
+     7px 7px 20px 0px #0002,
+     4px 4px 5px 0px #0001,
+     inset 0px 0px 0px 0px #fff9,
+     inset 0px 0px 0px 0px #0001,
+     inset 0px 0px 0px 0px #fff9,        inset 0px 0px 0px 0px #0001;
+   transition:box-shadow 0.6s cubic-bezier(.79,.21,.06,.81);
+     border-radius: 10px;
+     background-color: #ffc36566;
+  }
+  
+  .btn{
+    height: 50px;
+    width: 50px;
+    border-radius: 3px;
+    background: #ffc465b1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    box-shadow:
+     -7px -7px 20px 0px rgba(255, 255, 255, 0.6),
+     -4px -4px 5px 0px rgba(255, 255, 255, 0.6),
+     7px 7px 20px 0px rgba(0, 0, 0, 0.133),
+     4px 4px 5px 0px rgba(0, 0, 0, 0.067);
+   transition:box-shadow 0.6s cubic-bezier(.79,.21,.06,.81);
+    font-size: 26px;
+    color: #bb6509;
+    text-decoration: none;
+  }
+  .btn:hover{
+  background: radial-gradient(circle,  #0ff 0%, #e0e5ec 60%);
+    color: rgba(255, 0, 0, 0.5); 
+    animation: colorchange 3s linear infinite;
+  }
+  .btn:active{
+    box-shadow:  4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.5),
+      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+  }
+  
+  @keyframes colorchange {
+      to {filter: hue-rotate(360deg);}
+  }
