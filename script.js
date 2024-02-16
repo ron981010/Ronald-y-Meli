@@ -29,15 +29,6 @@ const countdown = setInterval(function() {
 }, 1000);
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Check if user has made a choice before
-    if (!localStorage.getItem('musicPreference')) {
-        // Display popup asking user's preference
-        let musicPreference = confirm("Do you want music on the website?");
-    
-        // Save user's preference in localStorage
-        localStorage.setItem('musicPreference', musicPreference);
-    }
-
     // Always play music when the page loads
     playMusic();
 
