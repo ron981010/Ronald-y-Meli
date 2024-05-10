@@ -3,10 +3,93 @@
 
 body {
   margin: 0;
-  color: #cf7411;
+  color:  #373229;
   padding: 0;
-  background-color: #fbf8f3;
+  background-color: #fcf6f2;
   font-family: "Fraunces", Arial, sans-serif; /* Using Fraunces font */
+}
+#svg-container {
+  margin-top: -9%;
+  z-index: 1;
+  position: sticky;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.44);
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+.leave2 {
+  position: absolute;
+  top: -31%;
+  right: 50%;
+  transform: translateX(-50%);
+  width: 263px;
+  height: 224px;
+  animation: fall 2s ease-out forwards; /* Animation for falling */
+}
+
+.leave2 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: opacity(70%);
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100%) rotate(0deg); /* Start off-screen at the top with no rotation */
+  }
+  100% {
+    transform: translateY(100%) rotate(360deg); /* Fall to the bottom with a full rotation */
+  }
+}
+
+.leave2 path {
+  stroke-width: 2;
+  stroke: white; /* Change the color of all lines to orange */
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: draw 6s ease forwards;
+}
+
+.leave {
+  position: absolute;
+  top: 60%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 230px; /* Adjust the width as needed */
+  height: 394px; /* Adjust the height as needed */
+}
+
+.leave svg {
+  width: 130%;
+  height: 70%;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.leave path {
+  stroke-width: 2;
+  stroke: white; /* Change the color of all lines to orange */
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: draw 6s ease forwards;
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 500;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 p {
@@ -55,7 +138,7 @@ a {
 .names {
   display: block;
   align-items: center;
-  padding-top: 80%;
+  padding-top: 40%;
   background-image: linear-gradient(
     90deg,
     rgba(234, 194, 54, 1) 0%,
@@ -64,6 +147,7 @@ a {
   );
   -webkit-background-clip: text;
   background-clip: text;
+  z-index: 1;
 }
 
 .name-1,
@@ -73,7 +157,7 @@ a {
 }
 
 .name-2 {
-  margin-bottom: 45px;
+  padding-bottom: 45px;
 }
 .line {
   width: 75px; /* Adjust the width of the line */
@@ -106,8 +190,15 @@ a {
   color: #fbf8f3; /* Text color of the date */
   padding: 5px 65px;
   font-size: 1.5rem;
+  z-index: 1;
+
+  /*! /*! margin-top: 28%; */ /*! *\/ */
 }
 
+.dateB {
+  z-index: 2;
+  padding-top: 30%;
+}
 .heart {
   position: absolute;
   z-index: 1;
@@ -367,6 +458,7 @@ a {
   margin-top: 150px;
   margin-bottom: 15px;
   font-weight: 200;
+  z-index: 1;
 }
 
 .countdown h1 {
@@ -488,8 +580,8 @@ a {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 80px;
-    width: 200px;
+    height: 50px;
+    width: 120px;
     position: relative;
      box-shadow:
      -7px -7px 20px 0px #fff9,
@@ -502,11 +594,12 @@ a {
    transition:box-shadow 0.6s cubic-bezier(.79,.21,.06,.81);
      border-radius: 10px;
      background-color: #ffc36566;
+     margin-left: 70%;
   }
   
   .btn{
-    height: 50px;
-    width: 50px;
+    height: 20px;
+    width: 25px;
     border-radius: 3px;
     background: #ffc465b1;
     display: flex;
@@ -521,7 +614,7 @@ a {
      7px 7px 20px 0px rgba(0, 0, 0, 0.133),
      4px 4px 5px 0px rgba(0, 0, 0, 0.067);
    transition:box-shadow 0.6s cubic-bezier(.79,.21,.06,.81);
-    font-size: 26px;
+    font-size: 13px;
     color: #bb6509;
     text-decoration: none;
   }
